@@ -14,7 +14,7 @@ pipeline{
         }
         stage('Build'){
             steps{
-                sh 'mvn clean install'
+                sh 'mvn -T 4 clean install'
             }
         }
         stage('Unit test'){
