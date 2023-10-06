@@ -28,7 +28,7 @@ pipeline{
                 steps{
                     echo '<----------- Sonarqube Analysis started'
                     withSonarQubeEnv('sonar-cloud') {
-            sh 'mvn clean verify sonar:sonar -Dsonar.projectKey=sarithapringbootapp -Dsonar.organization=mypractice -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=0e9c72ff9c9ffecc5d0fc09167bad472ec394b9d'
+            sh 'mvn clean verify sonar:sonar -Dsonar.projectKey=sarithapipelineproject -Dsonar.organization=sarithapipelineproject -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=0e9c72ff9c9ffecc5d0fc09167bad472ec394b9d'
                     echo '<----------- Sonarqube Analysis End'
                 }
             }
