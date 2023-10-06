@@ -21,17 +21,17 @@ pipeline{
                 echo '<------------- Unit Testing stopped  --------------->'
             }
         }
-        stage('Sonarqube Analysis'){
-                environment {
-                    scannerHome = tool 'sonar-scanner'
-                }
-                steps{
-                    echo '<----------- Sonarqube Analysis started'
-                    withSonarQubeEnv('sonar-cloud') {
-            sh 'mvn clean verify sonar:sonar -Dsonar.projectKey=sarithapipelineproject -Dsonar.organization=sarithapipelineproject -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=010543b78e4cb68d08f3ed9640c1fa6046e9abe7'
-                    echo '<----------- Sonarqube Analysis End'
-                }
-            }
-        }
+        //stage('Sonarqube Analysis'){
+                //environment {
+                    //scannerHome = tool 'sonar-scanner'
+               // }
+                //steps{
+                   // echo '<----------- Sonarqube Analysis started'
+                    //withSonarQubeEnv('sonar-cloud') {
+            //sh 'mvn clean verify sonar:sonar -Dsonar.projectKey=sarithapipelineproject -Dsonar.organization=sarithapipelineproject -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=010543b78e4cb68d08f3ed9640c1fa6046e9abe7'
+                    //echo '<----------- Sonarqube Analysis End'
+                //}
+            //}
+        //}
     }
 }
